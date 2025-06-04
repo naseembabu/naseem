@@ -1,0 +1,45 @@
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .hero-grid,
+    .about-grid,
+    .research-grid,
+    .experience-grid,
+    .publications-grid,
+    .contact-grid {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .research-grid,
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-container {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba

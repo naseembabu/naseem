@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naseem Babu | Computer Science & AI Research</title>
+    <meta name="description" content="Portfolio of Naseem Babu - AI Researcher, Computer Science Instructor">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav.navbar {
+            background: #222;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .burger div {
+            background: white;
+            height: 3px;
+            width: 25px;
+            border-radius: 3px;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero-content {
+            flex: 1 1 400px;
+            padding: 1rem;
+        }
+
+        .hero-image {
+            flex: 1 1 400px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            margin-right: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .primary-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        .secondary-btn {
+            border: 2px solid #007bff;
+            color: #007bff;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid, .experience-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 5px;
+        }
+
+        .experience-card {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 1rem;
+            flex: 1 1 300px;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1 1 400px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            padding: 0.75rem 1.5rem;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #222;
+            color: white;
+        }
+
+        .footer-social a {
+            margin: 0 0.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #222;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                text-align: right;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Naseem</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div></div><div></div><div></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Naseem Babu</h1>
+            <h2>AI Researcher & Computer Science Instructor</h2>
+            <p>Specializing in Machine Learning Applications in Biomedical Signal Processing & IoT</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="primary-btn">Get in Touch</a>
+                <a href="/assets/resume.pdf" class="secondary-btn" target="_blank">Download CV</a>
+            </div>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=GnXZR1kAAAAJ&hl=en" target="_blank"><img src="images/google-scholar.png" alt="Google Scholar" width="24" height="24"></a>
+                <a href="https://orcid.org/0000-0001-7145-3531" target="_blank"><img src="images/orcid.png" alt="Google Scholar" width="24" height="24"></a>
+                <a href="https://www.researchgate.net/profile/Naseem-Babu-2?ev=hdr_xprf" target="_blank"><img src="images/researchgate.png" alt="Google Scholar" width="24" height="24"></a>
+                <a href="https://www.linkedin.com/in/naseem-babu-686534191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/naseembabu" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="mailto:er.babunaseem@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile.png" alt="Naseem Babu">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p style="text-align: justify;">Currently completing my PhD at IIT Patna and joining UPES, Dehradun as Assistant Professor (2025).</p>
+        <p style="text-align: justify;">My story begins in the vibrant small village of Bareilly Uttar Pradesh, nestled in India, where curious minds are shaped by community and creativity. Growing up there, I was that kid who was equally excited about taking apart electronics and making friends laugh. My journey from those playful days to becoming an AI researcher wasn't a straight line—it was more like debugging code with plenty of unexpected errors and delightful discoveries along the way!</p>
+        <p style="text-align: justify;">While I might have been an 'average student' on paper, my enthusiasm for technology was anything but average. Today, I bring that same blend of technical passion and approachable humor to my classrooms, where students know they're meeting not just a professor but a fellow explorer. I'm living proof that you don't need to start with extraordinary privileges to build an extraordinary path.</p>
+        <p style="text-align: justify;">With over 5 years of teaching experience and a strong research background, I am passionate about bridging the gap between theoretical computer science and practical applications. My research focuses on machine learning applications in biomedical signal processing, various application areas of machine learning.</p>
+        <div class="skills-grid">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Biomedical Signal Processing</span>
+            <span class="skill-tag">BCI</span>
+            <span class="skill-tag">Data Analysis</span>
+        </div>
+    </section>
+
+    <section id="research">
+    <h2 class="section-title">Research Focus</h2>
+    <p>Areas of Expertise & Current Work</p>
+    <div class="skills-grid">
+        <div class="experience-card">
+            <h3><i class="fas fa-brain"></i> Machine Learning in Medical</h3>
+            <p>Developing advanced algorithms for EEG-based emotion detection and analysis using deep learning approaches.</p>
+        </div>
+        <div class="experience-card">
+            <h3><i class="fas fa-microchip"></i> Internet of Things (IoT)</h3>
+            <p>Creating smart agricultural systems and developing IoT solutions for sustainable development.</p>
+        </div>
+        <div class="experience-card">
+            <h3><i class="fas fa-network-wired"></i> Deep Learning</h3>
+            <p>Implementing neural networks and advanced architectures for complex pattern recognition tasks.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>Assistant Professor</h3>
+                <p>UPES, 2025-Present</p>
+                <p>Teaching advanced CS courses, AI research, mentoring students.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Teaching Assistant</h3>
+                <p>IIT Patna, 2020-Present</p>
+            </div>
+            <div class="experience-card">
+                <h3>Teaching Assistant</h3>
+                <p>MNIT Jaipur, 2018-2020</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> er.babunaseem@gmail.com</p>
+                <!-- <p><i class="fas fa-phone"></i> +91-8532045278</p> -->
+                <p><i class="fas fa-map-marker-alt"></i> IIT Patna, Bihar, India</p>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/mzzgbqyk" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Naseem Babu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* Dark Mode Styles */
+:root {
+    /* Light Mode Variables (default) */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #3b82f6;
+    --accent: #60a5fa;
+    --background: #ffffff;
+    --surface: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --success: #22c55e;
+    --warning: #eab308;
+    --error: #ef4444;
+    --card-bg: white;
+    --hero-bg: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-border: rgba(0, 0, 0, 0.1);
+    --input-bg: white;
+    --category-header-bg: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(240, 249, 255, 0.8));
+    --category-header-hover: linear-gradient(to right, rgba(240, 249, 255, 0.8), rgba(224, 242, 254, 0.8));
+    --course-item-bg: rgba(240, 249, 255, 0.5);
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #60a5fa;
+    --accent: #93c5fd;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --card-bg: #1e293b;
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --navbar-bg: rgba(15, 23, 42, 0.95);
+    --navbar-border: rgba(203, 213, 225, 0.1);
+    --input-bg: #1e293b;
+    --category-header-bg: linear-gradient(to right, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+    --category-header-hover: linear-gradient(to right, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+    --course-item-bg: rgba(30, 41, 59, 0.5);
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] body {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--navbar-border);
+}
+
+[data-theme="dark"] .hero,
+[data-theme="dark"] .newsletter-section,
+[data-theme="dark"] .courses-hero {
+    background: var(--hero-bg);
+}
+
+[data-theme="dark"] .category-card,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .contact-form,
+[data-theme="dark"] .publication-card,
+[data-theme="dark"] .experience-card,
+[data-theme="dark"] .research-card {
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+}
+
+[data-theme="dark"] .category-header {
+    background: var(--category-header-bg);
+}
+
+[data-theme="dark"] .category-header:hover {
+    background: var(--category-header-hover);
+}
+
+[data-theme="dark"] .course-item {
+    background: var(--course-item-bg);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .newsletter-form input {
+    background: var(--input-bg);
+    border-color: var(--navbar-border);
+    color: var(--text-primary);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: var(--primary-dark);
+}
+
+.theme-toggle i {
+    font-size: 1.5rem;
+}
+
+/* Smooth transitions for theme changes */
+body, 
+.navbar, 
+.hero, 
+.category-card, 
+.contact-card, 
+.contact-form, 
+.publication-card, 
+.experience-card, 
+.research-card,
+.category-header,
+.course-item,
+.form-group input,
+.form-group textarea,
+.newsletter-form input {
+    transition: all 0.3s ease;
+}
